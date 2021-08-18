@@ -109,17 +109,43 @@ func main() {
 	`
 	barang, _ := UnmarshalBarang([]byte(json))
 
-	fmt.Println("item meeting room")
+	fmt.Println("1. Find items in the Meeting Room.")
 	for _, el := range barang {
-		if el.Placement.Name == "Meeting Room" {
-			fmt.Println(el)
-
-		}
-	}
-	/*for _, el := range barang {
 		if el.Placement.Name == "Meeting Room" {
 			fmt.Println(el.Name)
 
 		}
-	}*/
+	}
+	fmt.Println("")
+	fmt.Println("2. Find all electronic devices.")
+	for _, el := range barang {
+		if el.Type == "electronic" {
+			fmt.Println(el.Name)
+
+		}
+	}
+	fmt.Println("")
+	fmt.Println("3. Find all the furniture.")
+	for _, el := range barang {
+		if el.Type == "furniture" {
+			fmt.Println(el.Name)
+
+		}
+	}
+	fmt.Println("")
+	fmt.Println("4. Find all items were purchased on 16 Januari 2020.")
+	for _, el := range barang {
+		if el.Type == "furniture" {
+			fmt.Println(el.Name)
+
+		}
+	}
+	fmt.Println("")
+	fmt.Println("5. Find all items with brown color.")
+	for _, el := range barang {
+		if el.Tags == "brown" {
+			fmt.Println(el.Name)
+
+		}
+	}
 }
