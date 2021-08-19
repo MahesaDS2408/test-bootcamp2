@@ -132,20 +132,32 @@ func main() {
 
 		}
 	}
+
+	//convert tanggal
+	/*i, err := strconv.ParseInt("1579190642", 10, 64)
+	if err != nil {
+		panic(err)
+	}
+	tm := time.Unix(i, 0)
+	fmt.Println(tm)*/
+
 	fmt.Println("")
 	fmt.Println("4. Find all items were purchased on 16 Januari 2020.")
 	for _, el := range barang {
-		if el.Type == "furniture" {
+		if el.PurchasedAt == int64(1579190642) {
 			fmt.Println(el.Name)
 
 		}
 	}
-	fmt.Println("")
+
+	/*fmt.Println("")
 	fmt.Println("5. Find all items with brown color.")
+	//var tags[0] = "brown"
 	for _, el := range barang {
-		if el.Tags == "brown" {
+		//fmt.Println(el.Tags[2])
+		/*for el.Tags[2] == "brown" {
 			fmt.Println(el.Name)
 
 		}
-	}
+	}*/
 }
