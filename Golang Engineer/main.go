@@ -5,7 +5,7 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/markbates/goth"
-	"github.com/markbates/goth/providers/google"
+	gf "github.com/markbates/goth/providers/google"
 )
 
 const (
@@ -15,7 +15,7 @@ const (
 
 func main() {
 	goth.UseProviders(
-		google.New(key, sec, "http://localhost:3000/auth/google/callback"),
+		gf.New(key, sec, "http://localhost:3000/auth/google/callback"),
 	)
 
 	app := fiber.New()
