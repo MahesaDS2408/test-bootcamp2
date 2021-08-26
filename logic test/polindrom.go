@@ -22,7 +22,7 @@ func polindrom(str string) string {
 func main() {
 	print("Radar			# --> ")
 	fmt.Println(polindrom("Radar"))
-	print("Mala			# --> ")
+	print("Malam			# --> ")
 	fmt.Println(polindrom("Malam"))
 	print("Kasur ini rusak		# --> ")
 	fmt.Println(polindrom("Kasur ini rusak"))
